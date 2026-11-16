@@ -1,0 +1,24 @@
+METHODOLOGICAL LOCK — consolidated results
+Prompts: soft_v3 | Error stimuli: v2 harder | Controls: stimuli_controls.json (n=20, categories matched)
+
+=== Detection on PLANTED ERRORS (hit rate) ===
+Run                         | Self  | Other | Gap   | McNemar p | Notes
+DeepSeek v1 easy+auditor    | 1.00  | 1.00  | 0.00  | 1         | ceiling
+DeepSeek v2 harder+ownership| 1.00  | 1.00  | 0.00  | 1         | ceiling
+DeepSeek v3 harder+soft     | 1.00  | 1.00  | 0.00  | 1         | ceiling
+Groq allam-2-7b soft_v3     | 0.05  | 0.05  | 0.00  | 1         | floor; llama-3.1-8b-instant N/A
+Ollama cloud                |  —    |  —    |  —    |  —        | chat HTTP 402 (no credits)
+
+=== FPR on CORRECT controls (said NO / incorrect) ===
+DeepSeek deepseek-chat     | Self FPR=0.00 | Other FPR=0.00 | gap=+0.00 | McNemar p=1
+  cells both=0 only_other=0 only_self=0 neither=20
+  FP ids Self=none; Other=none
+  usage={'prompt_tokens': 3988, 'completion_tokens': 1644, 'total_tokens': 5632, 'calls': 40, 'errors': 0}
+Groq allam-2-7b            | Self FPR=0.10 | Other FPR=0.30 | gap=+0.20 | McNemar p=0.125
+  cells both=2 only_other=4 only_self=0 neither=14
+  FP ids Self=['C11', 'C12']; Other=['C02', 'C11', 'C12', 'C14', 'C16', 'C18']; only_other=['C02', 'C14', 'C16', 'C18']
+  usage={'prompt_tokens': 5288, 'completion_tokens': 3276, 'total_tokens': 8564, 'calls': 40, 'errors': 0}
+
+Headline: attribution Self vs Other does not change planted-error detection (ceiling or floor).
+On Groq controls, Other FPR (0.30) > Self FPR (0.10) with 4 Other-only FPs (McNemar p=0.125, n_disc=4) — suggestive, not significant.
+DeepSeek control FPR=0.00/0.00.

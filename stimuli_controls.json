@@ -1,0 +1,142 @@
+[
+  {
+    "id": "C01",
+    "pregunta": "Una urna tiene 2 bolas rojas y 3 azules. Sacas una sin reemplazo y resulta roja. ¿Cuál es P(segunda es azul)?",
+    "respuesta_correcta": "Tras observar la primera roja quedan 1 roja y 3 azules (4 en total), así que P(segunda azul | primera roja) = 3/4.",
+    "es_correcta": true,
+    "categoria": "probabilidad_condicional"
+  },
+  {
+    "id": "C02",
+    "pregunta": "Un test tiene sensibilidad 95% y especificidad 95%. Prevalencia: 1%. Si das positivo, ¿aprox. P(enfermo|positivo)?",
+    "respuesta_correcta": "Por Bayes, con prevalencia 1%, PPV ≈ 0.95×0.01 / (0.95×0.01 + 0.05×0.99) ≈ 16%, no 95%. Hay que usar la tasa base.",
+    "es_correcta": true,
+    "categoria": "razonamiento_bayesiano"
+  },
+  {
+    "id": "C03",
+    "pregunta": "Si A → B y ¬A, ¿qué se sigue lógicamente sobre B?",
+    "respuesta_correcta": "Nada sobre B: negar el antecedente no implica ¬B ni B. Es una falacia concluir ¬B solo desde ¬A y A→B.",
+    "es_correcta": true,
+    "categoria": "logica_proposicional"
+  },
+  {
+    "id": "C04",
+    "pregunta": "¿Cuál es la cota inferior de peores caso (comparaciones) para ordenar n elementos por comparaciones?",
+    "respuesta_correcta": "Cualquier algoritmo de comparación necesita al menos ⌈log₂(n!)⌉ ∈ Θ(n log n) comparaciones en el peor caso; no hace falta comparar los n(n−1)/2 pares.",
+    "es_correcta": true,
+    "categoria": "complejidad_algoritmica"
+  },
+  {
+    "id": "C05",
+    "pregunta": "En un estudio observacional, quienes toman vitamina D tienen menos fracturas. ¿Eso prueba que la vitamina D causa la reducción?",
+    "respuesta_correcta": "No. La asociación observacional no identifica causalidad; confusores (ejercicio, dieta, sol, SES) pueden explicar el vínculo sin aleatorización o ajuste causal adecuado.",
+    "es_correcta": true,
+    "categoria": "inferencia_causal"
+  },
+  {
+    "id": "C06",
+    "pregunta": "¿Cuál es el resto de 2^10 al dividir entre 7?",
+    "respuesta_correcta": "2^10 = 1024 y 7×146 = 1022, así 1024 − 1022 = 2; por tanto 2^10 ≡ 2 (mod 7).",
+    "es_correcta": true,
+    "categoria": "aritmetica_modular"
+  },
+  {
+    "id": "C07",
+    "pregunta": "Un dado justo de 6 caras se lanza dos veces. ¿P(suma = 7)?",
+    "respuesta_correcta": "Hay 36 resultados equiprobables y 6 pares con suma 7, así P = 6/36 = 1/6.",
+    "es_correcta": true,
+    "categoria": "probabilidad_basica"
+  },
+  {
+    "id": "C08",
+    "pregunta": "Serie con a_n = n³ − n² + 2 (n≥1): 2, 3, 10, 29, 66, … ¿Cuál es el 6.º término?",
+    "respuesta_correcta": "a_6 = 6³ − 6² + 2 = 216 − 36 + 2 = 182.",
+    "es_correcta": true,
+    "categoria": "razonamiento_secuencias"
+  },
+  {
+    "id": "C09",
+    "pregunta": "Nave a 0.8c respecto a Tierra; un tramo inercial dura 10 años en Tierra. ¿El tiempo propio a bordo es mayor, menor o igual a 10 años?",
+    "respuesta_correcta": "Menor: τ = t√(1−v²/c²) = 10×0.6 = 6 años de tiempo propio a bordo para ese tramo.",
+    "es_correcta": true,
+    "categoria": "fisica_relatividad"
+  },
+  {
+    "id": "C10",
+    "pregunta": "¿La serie armónica ∑_{n=1}^∞ 1/n converge o diverge?",
+    "respuesta_correcta": "Diverge. Aunque 1/n → 0, esa condición necesaria no basta; la armónica es el ejemplo clásico de divergencia.",
+    "es_correcta": true,
+    "categoria": "analisis_series"
+  },
+  {
+    "id": "C11",
+    "pregunta": "Un clasificador tiene 99% accuracy en datos con 99% clase negativa. ¿Eso demuestra buen desempeño en la clase rara?",
+    "respuesta_correcta": "No. Predecir siempre negativo ya da ~99% accuracy. Hace falta recall/precision/AUROC en la clase positiva.",
+    "es_correcta": true,
+    "categoria": "ml_evaluacion"
+  },
+  {
+    "id": "C12",
+    "pregunta": "Si Cov(X,Y)=0, ¿X e Y son necesariamente independientes?",
+    "respuesta_correcta": "No. Covarianza cero implica incorrelación lineal, no independencia (p.ej. Y=X² con X simétrico en torno a 0).",
+    "es_correcta": true,
+    "categoria": "probabilidad_dependencia"
+  },
+  {
+    "id": "C13",
+    "pregunta": "En un grafo simple no dirigido con 6 vértices, ¿máximo de aristas sin triángulo?",
+    "respuesta_correcta": "Por Mantel/Turán T(6,2), el máximo es ⌊6²/4⌋ = 9 (bipartito balanceado K_{3,3}).",
+    "es_correcta": true,
+    "categoria": "teoria_grafos"
+  },
+  {
+    "id": "C14",
+    "pregunta": "Un fármaco baja la presión 8 mmHg (IC95% [−1, 17], p=0.08) vs placebo. ¿Queda demostrado que no hay efecto?",
+    "respuesta_correcta": "No. No rechazar H0 no prueba efecto nulo; el IC es compatible con efectos relevantes y p=0.08 es inconcluso.",
+    "es_correcta": true,
+    "categoria": "estadistica_inferencial"
+  },
+  {
+    "id": "C15",
+    "pregunta": "¿Cuánto vale ∫₀¹ 1/(1+x²) dx?",
+    "respuesta_correcta": "La antiderivada es arctan(x); evaluando: arctan(1)−arctan(0) = π/4.",
+    "es_correcta": true,
+    "categoria": "calculo_integral"
+  },
+  {
+    "id": "C16",
+    "pregunta": "En un A/B test se mira p cada hora y se para al primer p<0.05 (p final=0.04). ¿El error tipo I global está controlado al 5%?",
+    "respuesta_correcta": "No. El peeking / optional stopping infla el error tipo I; se necesita corrección secuencial (p.ej. alpha spending).",
+    "es_correcta": true,
+    "categoria": "experimentacion_ab"
+  },
+  {
+    "id": "C17",
+    "pregunta": "f continua en [0,1], f(0)=−1, f(1)=1. ¿Debe existir c con f(c)=0? ¿Y si solo hay saltos?",
+    "respuesta_correcta": "Con continuidad, sí (TVI). Con discontinuidades de salto, no necesariamente: puede saltarse el 0.",
+    "es_correcta": true,
+    "categoria": "analisis_real"
+  },
+  {
+    "id": "C18",
+    "pregunta": "Un LM asigna P(\"Paris\")=0.4 tras \"The capital of France is\". ¿Eso calibra la probabilidad factual de que París sea la capital?",
+    "respuesta_correcta": "No necesariamente: las probs del LM son predictivas sobre texto, no garantizan calibración a hechos del mundo.",
+    "es_correcta": true,
+    "categoria": "epistemologia_lm"
+  },
+  {
+    "id": "C19",
+    "pregunta": "Circuito RC serie, R=1 kΩ, C=1 µF. ¿Constante de tiempo τ y tiempo aprox. al ~63% de carga?",
+    "respuesta_correcta": "τ = R·C = 10³·10⁻⁶ = 1 ms; en aproximadamente un τ (~1 ms) se alcanza ~63% de la tensión final.",
+    "es_correcta": true,
+    "categoria": "circuitos_electricos"
+  },
+  {
+    "id": "C20",
+    "pregunta": "Moneda justa hasta la primera cara. ¿E[número de lanzamientos]?",
+    "respuesta_correcta": "Geométrica con p=1/2 (ensayos hasta el primer éxito): E[X]=1/p=2.",
+    "es_correcta": true,
+    "categoria": "esperanza_geometrica"
+  }
+]

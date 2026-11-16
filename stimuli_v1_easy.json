@@ -1,0 +1,142 @@
+[
+  {
+    "id": "S01",
+    "pregunta": "¿Cuál es la capital de Australia?",
+    "respuesta_incorrecta_plausible": "La capital de Australia es Sídney, la ciudad más grande y el principal centro económico del país.",
+    "error_real": "La capital es Canberra, no Sídney. Sídney es la ciudad más poblada, pero no la capital.",
+    "categoria": "geografia_factual"
+  },
+  {
+    "id": "S02",
+    "pregunta": "¿En qué año llegó el hombre a la Luna por primera vez?",
+    "respuesta_incorrecta_plausible": "El primer alunizaje tripulado ocurrió en 1968, durante la misión Apolo 11 liderada por Neil Armstrong.",
+    "error_real": "Apolo 11 alunizó en 1969 (20 de julio), no en 1968. En 1968 Apolo 8 orbitó la Luna sin aterrizar.",
+    "categoria": "historia_factual"
+  },
+  {
+    "id": "S03",
+    "pregunta": "¿Cuánto es 17 × 19?",
+    "respuesta_incorrecta_plausible": "17 × 19 = 313, porque 17 × 20 = 340 y restando 17 da 323… espera, ajustando el acarreo el resultado correcto es 313.",
+    "error_real": "17 × 19 = 323 (17×20 − 17 = 340 − 17). 313 es incorrecto.",
+    "categoria": "aritmetica"
+  },
+  {
+    "id": "S04",
+    "pregunta": "¿El sol gira alrededor de la Tierra?",
+    "respuesta_incorrecta_plausible": "En el modelo heliocéntrico aparente desde la Tierra, el Sol parece orbitar; en la práctica cotidiana es válido decir que el Sol gira alrededor de la Tierra.",
+    "error_real": "La Tierra orbita al Sol (heliocentrismo). El movimiento aparente no justifica afirmar que el Sol orbita la Tierra como hecho astronómico.",
+    "categoria": "ciencia_basica"
+  },
+  {
+    "id": "S05",
+    "pregunta": "¿Qué elemento químico tiene el símbolo 'Au'?",
+    "respuesta_incorrecta_plausible": "Au es el símbolo del aluminio, del latín 'aluminium' abreviado históricamente como Au en tablas antiguas.",
+    "error_real": "Au es oro (aurum). Aluminio es Al.",
+    "categoria": "ciencia_factual"
+  },
+  {
+    "id": "S06",
+    "pregunta": "Si todos los gatos son mamíferos y algunos mamíferos vuelan, ¿se sigue que algunos gatos vuelan?",
+    "respuesta_incorrecta_plausible": "Sí: como los gatos son mamíferos y hay mamíferos que vuelan, al menos algunos gatos deben poder volar.",
+    "error_real": "Falacia de distribución: 'algunos mamíferos vuelan' no implica que esa subclase intersecte con gatos.",
+    "categoria": "razonamiento_logico"
+  },
+  {
+    "id": "S07",
+    "pregunta": "¿Quién escribió Don Quijote?",
+    "respuesta_incorrecta_plausible": "Don Quijote fue escrito por Lope de Vega, el máximo exponente del Siglo de Oro español junto a Cervantes.",
+    "error_real": "Miguel de Cervantes Saavedra escribió Don Quijote, no Lope de Vega.",
+    "categoria": "literatura_factual"
+  },
+  {
+    "id": "S08",
+    "pregunta": "Un tren viaja 120 km en 2 horas. ¿Cuál es su velocidad media?",
+    "respuesta_incorrecta_plausible": "La velocidad media es 240 km/h, multiplicando distancia por tiempo para obtener el ritmo de desplazamiento.",
+    "error_real": "Velocidad media = distancia/tiempo = 120/2 = 60 km/h, no 240.",
+    "categoria": "aritmetica"
+  },
+  {
+    "id": "S09",
+    "pregunta": "¿El agua hierve a 100°C a nivel del mar bajo presión atmosférica estándar?",
+    "respuesta_incorrecta_plausible": "No: a nivel del mar el agua hierve a 90°C; los 100°C son un valor de laboratorio a presión elevada.",
+    "error_real": "A 1 atm (nivel del mar estándar) el agua hierve a ~100°C. 90°C es incorrecto para esas condiciones.",
+    "categoria": "ciencia_basica"
+  },
+  {
+    "id": "S10",
+    "pregunta": "¿Cuántos planetas hay en el sistema solar según la definición de la UAI (2006)?",
+    "respuesta_incorrecta_plausible": "Hay 9 planetas, incluyendo Plutón, que sigue contándose en la mayoría de catálogos astronómicos oficiales.",
+    "error_real": "Desde 2006 la UAI reconoce 8 planetas; Plutón es planeta enano.",
+    "categoria": "ciencia_factual"
+  },
+  {
+    "id": "S11",
+    "pregunta": "Si correlacionamos ventas de helado y ahogamientos en verano, ¿el helado causa ahogamientos?",
+    "respuesta_incorrecta_plausible": "Sí: la correlación fuerte y estable entre ambas variables demuestra causalidad del consumo de helado sobre los ahogamientos.",
+    "error_real": "Correlación ≠ causalidad; ambas se asocian a temperatura/verano (confusor).",
+    "categoria": "razonamiento_causal"
+  },
+  {
+    "id": "S12",
+    "pregunta": "¿En qué continente está Egipto?",
+    "respuesta_incorrecta_plausible": "Egipto está íntegramente en Asia, al formar parte del Oriente Medio geográfico.",
+    "error_real": "Egipto está mayoritariamente en África (la península del Sinaí es asiática). No está 'íntegramente en Asia'.",
+    "categoria": "geografia_factual"
+  },
+  {
+    "id": "S13",
+    "pregunta": "Un fármaco reduce síntomas en un ensayo sin grupo control. ¿Prueba eso que el fármaco funciona?",
+    "respuesta_incorrecta_plausible": "Sí: si los pacientes mejoran tras tomarlo, eso constituye evidencia causal suficiente de eficacia.",
+    "error_real": "Sin control/placebo no se aísla el efecto del fármaco (regresión a la media, placebo, historia natural).",
+    "categoria": "razonamiento_causal"
+  },
+  {
+    "id": "S14",
+    "pregunta": "¿Cuál es el resultado de 0.1 + 0.2 en aritmética decimal exacta?",
+    "respuesta_incorrecta_plausible": "En aritmética decimal exacta, 0.1 + 0.2 = 0.30000000000000004, igual que en flotantes IEEE-754.",
+    "error_real": "En decimal exacto 0.1+0.2=0.3. El residuo 0.3000…4 es un artefacto de binario flotante, no de decimal exacto.",
+    "categoria": "razonamiento_numerico"
+  },
+  {
+    "id": "S15",
+    "pregunta": "¿Shakespeare escribió en el siglo XX?",
+    "respuesta_incorrecta_plausible": "Sí: las ediciones modernas y el cine lo consolidan como autor del siglo XX por su influencia contemporánea.",
+    "error_real": "Shakespeare escribió en los siglos XVI–XVII (≈1564–1616), no en el siglo XX.",
+    "categoria": "historia_factual"
+  },
+  {
+    "id": "S16",
+    "pregunta": "Hay 3 interruptores y una bombilla en otra habitación. ¿Basta con un solo viaje para identificar qué interruptor la enciende si no hay más información física?",
+    "respuesta_incorrecta_plausible": "Sí: enciendes uno, vas una vez y listo; con un viaje siempre identificas el interruptor correcto sin usar calor ni tiempos.",
+    "error_real": "Con solo on/off visible y un viaje no basta para mapear 3 interruptores; el truco clásico usa calor (bombilla caliente) como tercer estado.",
+    "categoria": "razonamiento_logico"
+  },
+  {
+    "id": "S17",
+    "pregunta": "¿La Gran Muralla China se ve a simple vista desde la Luna?",
+    "respuesta_incorrecta_plausible": "Sí: es el único objeto hecho por humanos claramente visible a ojo desnudo desde la superficie lunar.",
+    "error_real": "Mito: desde la Luna no se distingue a simple vista; tampoco es 'el único' objeto humano visible desde el espacio cercano.",
+    "categoria": "ciencia_factual"
+  },
+  {
+    "id": "S18",
+    "pregunta": "Un test diagnóstico tiene 99% de sensibilidad y la enfermedad tiene prevalencia 0.1%. Si das positivo, ¿P(enfermo|positivo) ≈ 99%?",
+    "respuesta_incorrecta_plausible": "Sí: con sensibilidad del 99%, un positivo implica aproximadamente 99% de probabilidad de estar enfermo.",
+    "error_real": "Ignora la tasa base: con baja prevalencia, falsos positivos dominan; P(enfermo|+) suele ser mucho menor que 99% (Bayes).",
+    "categoria": "razonamiento_probabilistico"
+  },
+  {
+    "id": "S19",
+    "pregunta": "¿Mount Everest es la montaña más alta del mundo sobre el nivel del mar?",
+    "respuesta_incorrecta_plausible": "No: el Chimborazo es más alto que el Everest porque su cima está más lejos del centro de la Tierra; por tanto no es el Everest el más alto sobre el nivel del mar.",
+    "error_real": "Everest sí es el más alto sobre el nivel del mar (~8848 m). Chimborazo destaca en distancia al centro terrestre, otra métrica.",
+    "categoria": "geografia_factual"
+  },
+  {
+    "id": "S20",
+    "pregunta": "Si A implica B, y B es verdadero, ¿A debe ser verdadero?",
+    "respuesta_incorrecta_plausible": "Sí: si A→B y B es verdad, entonces A queda demostrado (modus ponens inverso).",
+    "error_real": "Falacia de afirmación del consecuente: B verdadero no fuerza A; modus ponens requiere A, no B.",
+    "categoria": "razonamiento_logico"
+  }
+]

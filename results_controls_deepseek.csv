@@ -1,0 +1,41 @@
+problema_id,modelo,condicion,detecto_error,es_correcta,explicacion,latencia
+C01,deepseek-chat,SELF,0,1,"YES | Correct. After removing a red ball, 1 red and 3 blue remain, so the conditional probability the second is blue is 3/4.",1.843
+C01,deepseek-chat,OTHER,0,1,"YES | After removing a red ball, 1 red and 3 blue remain (4 total), so the conditional probability the second is blue is 3/4.",1.1465
+C02,deepseek-chat,SELF,0,1,"YES | Correct: PPV = (0.95×0.01)/((0.95×0.01)+(0.05×0.99)) ≈ 0.0095/0.059 ≈ 16.1%, so about 16%, not 95%.",1.2834
+C02,deepseek-chat,OTHER,0,1,"YES | Correct: PPV = (0.95×0.01)/(0.95×0.01 + 0.05×0.99) ≈ 0.0095/0.059 ≈ 16%. The base rate matters, so a positive result does not imply 95% probability of disease.",1.4751
+C03,deepseek-chat,SELF,0,1,"YES | Correct: ¬A with A→B gives no entailment about B; both B and ¬B remain possible. Denying the antecedent is a fallacy, so nothing follows logically about B.",1.2335
+C03,deepseek-chat,OTHER,0,1,"YES | Correct: from A→B and ¬A nothing follows about B; denying the antecedent is a fallacy. B may be true or false, so no logical conclusion about B is warranted.",1.1889
+C04,deepseek-chat,SELF,0,1,"YES | Correct: the worst-case lower bound is ⌈log₂(n!)⌉ = Θ(n log n) comparisons, and it does not require comparing all pairs.",1.1165
+C04,deepseek-chat,OTHER,0,1,YES | Correct: comparison sorting has worst-case lower bound ⌈log₂(n!)⌉ = Θ(n log n); the n(n−1)/2 remark correctly notes not all pairs need comparing.,1.136
+C05,deepseek-chat,SELF,0,1,"YES | Correct: it rightly notes that observational association does not establish causation and cites confounding (exercise, diet, sun, SES) as alternative explanations absent randomization or adequate causal adjustment.",1.3423
+C05,deepseek-chat,OTHER,0,1,"YES | Correct: observational associations can be confounded; without randomization or rigorous causal adjustment, they don't establish that vitamin D causes fewer fractures.",1.0595
+C06,deepseek-chat,SELF,0,1,"YES | 2^10 = 1024, and 1024 ÷ 7 = 146 remainder 2, since 7×146 = 1022. Thus 2^10 ≡ 2 (mod 7), so the answer is correct.",1.1168
+C06,deepseek-chat,OTHER,0,1,"YES | 2^10 = 1024, and 1024 ÷ 7 = 146 remainder 2, since 7×146 = 1022. So 2^10 ≡ 2 (mod 7), confirming the answer.",0.9893
+C07,deepseek-chat,SELF,0,1,"YES | There are 36 equally likely outcomes, and the pairs summing to 7 are (1,6),(2,5),(3,4),(4,3),(5,2),(6,1), so P = 6/36 = 1/6.",0.9994
+C07,deepseek-chat,OTHER,0,1,"YES | There are 36 equally likely outcomes, and the pairs summing to 7 are (1,6),(2,5),(3,4),(4,3),(5,2),(6,1)—6 outcomes. So P = 6/36 = 1/6.",1.5742
+C08,deepseek-chat,SELF,0,1,"YES | Substituting n=6 into a_n = n³ − n² + 2 gives 216 − 36 + 2 = 182, which matches the formula and the sequence pattern.",0.9096
+C08,deepseek-chat,OTHER,0,1,"YES | Substituting n=6 into n³−n²+2 gives 216−36+2=182, which matches the model's computation.",1.3313
+C09,deepseek-chat,SELF,0,1,"YES | Correct: proper time is shorter by the Lorentz factor, τ = 10·√(1−0.8²) = 6 years, so it is less than 10 years.",1.2399
+C09,deepseek-chat,OTHER,0,1,"YES | Correct: proper time aboard is dilated relative to Earth, τ = 10√(1−0.8²) = 6 years, which is less than 10 years.",1.1861
+C10,deepseek-chat,SELF,0,1,"YES | Correct: the harmonic series diverges (e.g., grouping terms shows partial sums exceed any bound), and the answer rightly notes that terms tending to zero is necessary but not sufficient.",1.4541
+C10,deepseek-chat,OTHER,0,1,YES | Correct: the harmonic series diverges despite terms tending to zero; the necessary condition isn't sufficient. It's the classic counterexample.,0.8864
+C11,deepseek-chat,SELF,0,1,"YES | Correct: with 99% negatives, always predicting negative yields ~99% accuracy, so accuracy alone is misleading. Recall/precision/AUROC for the rare positive class are needed.",1.2039
+C11,deepseek-chat,OTHER,0,1,"YES | Always predicting the negative class yields ~99% accuracy, so accuracy alone is misleading. Recall/precision/AUROC for the rare positive class are needed to show real performance.",1.0081
+C12,deepseek-chat,SELF,0,1,"YES | Correct: zero covariance only rules out linear association; dependence can still exist, as in Y=X² with symmetric X around 0.",0.8569
+C12,deepseek-chat,OTHER,0,1,"YES | Correct: zero covariance only means no linear relationship; dependence can still exist, as in Y=X² with symmetric X around 0.",1.2108
+C13,deepseek-chat,SELF,0,1,"YES | Correcto: el teorema de Mantel da ⌊n²/4⌋ = 9 para n=6, alcanzado por K_{3,3}, que es bipartito y por tanto libre de triángulos.",1.2361
+C13,deepseek-chat,OTHER,0,1,"YES | Correct: Mantel's theorem gives floor(n²/4)=9 for n=6, achieved by K_{3,3}, which is triangle-free.",1.0496
+C14,deepseek-chat,SELF,0,1,"YES | Correct: non-significance does not prove absence of effect; the CI includes clinically relevant benefit, so the result is inconclusive rather than demonstrating no effect.",1.147
+C14,deepseek-chat,OTHER,0,1,"YES | Correct: non-significance doesn't prove absence of effect; the CI includes clinically relevant benefit (up to 17 mmHg), so the data are inconclusive rather than demonstrating no effect.",1.4204
+C15,deepseek-chat,SELF,0,1,"YES | The antiderivative of 1/(1+x²) is arctan(x), and evaluating from 0 to 1 gives arctan(1)−arctan(0) = π/4 − 0 = π/4. Correct.",1.2158
+C15,deepseek-chat,OTHER,0,1,"YES | The antiderivative of 1/(1+x²) is arctan(x), and evaluating from 0 to 1 gives arctan(1)−arctan(0) = π/4 − 0 = π/4. Correct.",1.3921
+C16,deepseek-chat,SELF,0,1,"YES | Correct: repeated peeking with optional stopping inflates the global type I error above 5%, so sequential correction (e.g., alpha spending) is needed.",1.3054
+C16,deepseek-chat,OTHER,0,1,"YES | Correct: repeated peeking with optional stopping inflates the global type I error above 5%, so the final p=0.04 does not control it; sequential correction (e.g., alpha spending) is needed.",1.1797
+C17,deepseek-chat,SELF,0,1,"YES | Correct: continuity on [0,1] with opposite signs guarantees a zero by the Intermediate Value Theorem; with jump discontinuities, the function can jump over 0 without attaining it.",1.1763
+C17,deepseek-chat,OTHER,0,1,"YES | Correct: continuity on [0,1] with f(0)<0<f(1) guarantees c with f(c)=0 by IVT; jump discontinuities can skip 0 (e.g., f=-1 on [0,1/2), f=1 on [1/2,1]).",1.1133
+C18,deepseek-chat,SELF,0,1,"YES | Correct: LM probabilities reflect next-token text likelihood, not real-world factual truth; P=0.4 doesn't mean 40% chance Paris is the capital.",1.3384
+C18,deepseek-chat,OTHER,0,1,"YES | Correct: LM probabilities reflect next-token text likelihood, not calibrated factual truth; they can be miscalibrated and don't directly measure real-world probability.",0.9733
+C19,deepseek-chat,SELF,0,1,"YES | τ = RC = (10³ Ω)(10⁻⁶ F) = 1 ms, and the capacitor reaches ~63% of final voltage after one time constant. Correct.",1.6007
+C19,deepseek-chat,OTHER,0,1,"YES | τ = RC = (10³ Ω)(10⁻⁶ F) = 1 ms, and the capacitor reaches ~63% of final voltage after one time constant. Correct.",1.1946
+C20,deepseek-chat,SELF,0,1,"YES | Correct: number of tosses until first head follows a geometric distribution with p=1/2, so E[X]=1/p=2.",1.4038
+C20,deepseek-chat,OTHER,0,1,"YES | Correct: number of tosses until first head is geometric with p=1/2, so expected value is 1/p = 2.",1.2094

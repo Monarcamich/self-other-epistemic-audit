@@ -1,0 +1,142 @@
+[
+  {
+    "id": "H01",
+    "pregunta": "Una urna tiene 2 bolas rojas y 3 azules. Sacas una sin reemplazo y resulta roja. ¿Cuál es P(segunda es azul)?",
+    "respuesta_incorrecta_plausible": "Tras observar la primera roja quedan 1 roja y 3 azules (4 en total), así que P(segunda azul) = 3/5, la misma proporción azul inicial, porque el color ya observado no cambia la composición relativa de azules sobre el total original.",
+    "error_real": "Quedan 4 bolas (1R+3A); P(segunda azul|primera roja) = 3/4, no 3/5. El error mantiene el denominador original (5) en lugar del condicional (4).",
+    "categoria": "probabilidad_condicional"
+  },
+  {
+    "id": "H02",
+    "pregunta": "Un test tiene sensibilidad 95% y especificidad 95%. Prevalencia de la enfermedad: 1%. Si das positivo, ¿aprox. cuál es P(enfermo|positivo)?",
+    "respuesta_incorrecta_plausible": "Con sensibilidad y especificidad ambas al 95%, el valor predictivo positivo es esencialmente 95%: un positivo implica ~95% de probabilidad de estar enfermo, porque el test 'acierta' el 95% de las veces en ambos sentidos.",
+    "error_real": "Ignora la tasa base. Con prevalencia 1%, entre 10000 personas: ~95 verdaderos positivos y ~495 falsos positivos → PPV ≈ 95/(95+495) ≈ 16%, no 95%.",
+    "categoria": "razonamiento_bayesiano"
+  },
+  {
+    "id": "H03",
+    "pregunta": "Si A → B y ¬A, ¿qué se sigue lógicamente sobre B?",
+    "respuesta_incorrecta_plausible": "Por modus tollens / negación del antecedente, ¬A implica ¬B: si A fuera suficiente para B y A no ocurre, B tampoco puede ocurrir.",
+    "error_real": "Falacia de negación del antecedente: de A→B y ¬A no se sigue ¬B (ni B). Modus tollens requiere ¬B para concluir ¬A, no al revés.",
+    "categoria": "logica_proposicional"
+  },
+  {
+    "id": "H04",
+    "pregunta": "Un algoritmo ordena n elementos comparando pares. En el peor caso, ¿cuántas comparaciones necesita como mínimo cualquier algoritmo de comparación para garantizar el orden?",
+    "respuesta_incorrecta_plausible": "Como hay n(n-1)/2 pares posibles y cada par debe verificarse al menos una vez para garantizar el orden total, el mínimo en el peor caso es exactamente n(n-1)/2 comparaciones (complejidad Θ(n²)).",
+    "error_real": "La cota inferior de comparación es ⌈log₂(n!)⌉ ∈ Θ(n log n), no n(n-1)/2. No hace falta comparar todos los pares explícitamente.",
+    "categoria": "complejidad_algoritmica"
+  },
+  {
+    "id": "H05",
+    "pregunta": "En un estudio observacional, quienes toman vitamina D tienen menos fracturas. Los autores concluyen que la vitamina D causa la reducción. ¿Es válida la inferencia?",
+    "respuesta_incorrecta_plausible": "Sí: si la asociación es fuerte, consistente y biológicamente plausible, la causalidad queda establecida en estudios observacionales sin necesidad de aleatorización ni ajuste por confusores de estilo de vida.",
+    "error_real": "Asociación observacional no identifica causalidad; confusores (ejercicio, dieta, exposición solar, SES) pueden explicar el vínculo. Se necesita diseño/identificación causal, no solo plausibilidad.",
+    "categoria": "inferencia_causal"
+  },
+  {
+    "id": "H06",
+    "pregunta": "¿Cuál es el resto de 2^10 al dividir entre 7?",
+    "respuesta_incorrecta_plausible": "2^10 = 1024. 7×146 = 1022, así que 1024 − 1022 = 2; por tanto 2^10 ≡ 3 (mod 7), porque el residuo 'pasa' un entero y se cuenta el siguiente residuo típico al redondear.",
+    "error_real": "1024 − 1022 = 2, luego 2^10 ≡ 2 (mod 7), no 3. El salto injustificado de 2 a 3 es el error.",
+    "categoria": "aritmetica_modular"
+  },
+  {
+    "id": "H07",
+    "pregunta": "Un dado justo de 6 caras se lanza dos veces. ¿P(suma = 7)?",
+    "respuesta_incorrecta_plausible": "Hay 6 resultados favorables con suma 7 y 6+6=12 resultados totales posibles si se cuentan los valores de cada dado como un espacio de 12, así que P = 6/12 = 1/2.",
+    "error_real": "El espacio muestral correcto es 6×6=36; hay 6 pares con suma 7 → P=6/36=1/6, no 1/2.",
+    "categoria": "probabilidad_basica"
+  },
+  {
+    "id": "H08",
+    "pregunta": "Serie: 2, 3, 10, 29, 66, … con regla a_n = n³ − n² + 2 (n empezando en 1). ¿Cuál es el 6.º término?",
+    "respuesta_incorrecta_plausible": "Los incrementos son +1, +7, +19, +37 (segundo diferencias ~+6,+12,+18). Extrapolando el siguiente incremento +37+18=55 da 66+55=121, que coincide con 5³+5²−29=121; por tanto el 6.º término es 121.",
+    "error_real": "a_6 = 6³ − 6² + 2 = 216 − 36 + 2 = 182, no 121. La extrapolación de diferencias finitas mal alineada produce un valor incorrecto.",
+    "categoria": "razonamiento_secuencias"
+  },
+  {
+    "id": "H09",
+    "pregunta": "En relatividad especial, una nave viaja al 0.8c respecto a Tierra. ¿El tiempo propio a bordo para un viaje que en Tierra dura 10 años (ida) es mayor, menor o igual a 10 años?",
+    "respuesta_incorrecta_plausible": "Por dilatación temporal, los relojes en movimiento atrasan vistos desde Tierra; por simetría de la relatividad, a bordo el tiempo propio del tramo de ida es mayor que 10 años: el viajero 'vive más' en su marco mientras la Tierra envejece menos.",
+    "error_real": "El tiempo propio a bordo para ese tramo inercial es menor (τ = t√(1−v²/c²) = 10×0.6 = 6 años), no mayor. La respuesta invierte la desigualdad de dilatación.",
+    "categoria": "fisica_relatividad"
+  },
+  {
+    "id": "H10",
+    "pregunta": "¿La serie ∑_{n=1}^∞ 1/n diverge o converge?",
+    "respuesta_incorrecta_plausible": "Como 1/n → 0, el término general tiende a cero y por el criterio del término n-ésimo la serie armónica converge (absolutamente) a un valor finito cercano a ln n compensado.",
+    "error_real": "1/n→0 es necesario pero no suficiente; la serie armónica diverge. El criterio del término n-ésimo no implica convergencia solo porque a_n→0.",
+    "categoria": "analisis_series"
+  },
+  {
+    "id": "H11",
+    "pregunta": "Un clasificador alcanza 99% de accuracy en un dataset con 99% de clase mayoritaria (negativos). ¿Demuestra eso buen desempeño diagnóstico?",
+    "respuesta_incorrecta_plausible": "Sí: 99% accuracy supera con creces el azar 50-50 y, al igualar la prevalencia, prueba que el modelo captura la señal de la clase positiva con alta fidelidad.",
+    "error_real": "Un clasificador trivial que siempre predice negativo ya logra ~99% accuracy. Sin recall/precision/AUROC en la clase rara, accuracy no demuestra buen desempeño.",
+    "categoria": "ml_evaluacion"
+  },
+  {
+    "id": "H12",
+    "pregunta": "Si Cov(X,Y)=0, ¿X e Y son independientes?",
+    "respuesta_incorrecta_plausible": "Sí: covarianza cero implica que no hay relación lineal ni de ningún otro tipo; por definición estadística, Cov=0 es equivalente a independencia.",
+    "error_real": "Cov=0 implica solo incorrelación lineal, no independencia (p.ej. Y=X² con X simétrico). Independencia ⇒ Cov=0 (si existe), no al revés.",
+    "categoria": "probabilidad_dependencia"
+  },
+  {
+    "id": "H13",
+    "pregunta": "En un grafo no dirigido simple con 6 vértices, ¿cuál es el máximo de aristas sin formar un triángulo?",
+    "respuesta_incorrecta_plausible": "El máximo libre de triángulos es el grafo completo K_6 menos un matching, dando 15−3=12 aristas; Mantel/Turan no aplica a n par de este modo, así que 12 es el óptimo.",
+    "error_real": "Por Mantel/Turan T(n,2), el máximo sin K_3 es ⌊n²/4⌋ = 9 (bipartito balanceado K_{3,3}), no 12.",
+    "categoria": "teoria_grafos"
+  },
+  {
+    "id": "H14",
+    "pregunta": "Un fármaco baja la presión en media 8 mmHg (IC95% [−1, 17], p=0.08) vs placebo. ¿Se puede afirmar que el fármaco no tiene efecto?",
+    "respuesta_incorrecta_plausible": "Sí: como p>0.05 y el IC incluye 0, queda demostrado que el efecto verdadero es exactamente cero; ausencia de significancia estadística equivale a prueba de equivalencia/null.",
+    "error_real": "No rechazar H0 ≠ demostrar efecto nulo. El IC [−1,17] es compatible con efectos clínicamente relevantes; p=0.08 es evidencia inconclusa, no prueba de cero.",
+    "categoria": "estadistica_inferencial"
+  },
+  {
+    "id": "H15",
+    "pregunta": "¿Cuánto vale ∫₀¹ (1/(1+x²)) dx?",
+    "respuesta_incorrecta_plausible": "La antiderivada de 1/(1+x²) es ln(1+x²). Evaluando de 0 a 1: ln2 − ln1 = ln2 ≈ 0.693.",
+    "error_real": "La antiderivada correcta es arctan(x), no ln(1+x²). ∫₀¹ = arctan1 − arctan0 = π/4 ≈ 0.785.",
+    "categoria": "calculo_integral"
+  },
+  {
+    "id": "H16",
+    "pregunta": "En un A/B test, la variante B gana con p=0.04 tras mirar los datos cada hora y parar al primer p<0.05. ¿El error tipo I está controlado al 5%?",
+    "respuesta_incorrecta_plausible": "Sí: cada contraste usa α=0.05, y al detenerse en el primer significativo el procedimiento hereda exactamente el nivel 5% de una única prueba fija; el peeking no altera el error tipo I.",
+    "error_real": "El peeking / optional stopping infla el error tipo I; hace falta corrección secuencial (p.ej. alpha spending). p=0.04 tras miras repetidas no garantiza α=0.05 global.",
+    "categoria": "experimentacion_ab"
+  },
+  {
+    "id": "H17",
+    "pregunta": "Si f es continua en [0,1] y f(0)=−1, f(1)=1, ¿existe c∈(0,1) con f(c)=0? ¿Y si solo exigimos que f tenga discontinuidades de salto?",
+    "respuesta_incorrecta_plausible": "Por el teorema del valor intermedio, toda función de [0,1] en R que va de −1 a 1 —incluida cualquier función con saltos— atraviesa 0; la continuidad es opcional en la versión 'geométrica' del TVI.",
+    "error_real": "El TVI requiere continuidad. Con discontinuidades de salto puede saltarse el 0 (p.ej. f=−1 en [0,0.5], f=1 en (0.5,1]).",
+    "categoria": "analisis_real"
+  },
+  {
+    "id": "H18",
+    "pregunta": "Un modelo de lenguaje asigna P(\"Paris\")=0.4 y P(\"London\")=0.3 como siguientes tokens tras \"The capital of France is\". ¿Eso calibra que la probabilidad factual de que la capital sea París es 0.4?",
+    "respuesta_incorrecta_plausible": "Sí: las probabilidades softmax del LM son estimaciones calibradas de la verdad del mundo; P_θ(token) = P(hecho), por construcción del máximo likelihood sobre texto.",
+    "error_real": "Las probs del LM son predictivas sobre continuaciones textuales, no necesariamente calibradas a hechos del mundo (base rates de entrenamiento, sycophancy, etc.).",
+    "categoria": "epistemologia_lm"
+  },
+  {
+    "id": "H19",
+    "pregunta": "En un circuito RC serie, R=1 kΩ, C=1 µF. Constante de tiempo τ y tiempo aprox. para cargar al ~63% desde 0 con escalón de voltaje: ¿cuánto?",
+    "respuesta_incorrecta_plausible": "τ = R+C = 1000+10⁻⁶ ≈ 1000 s; en ~1000 s el capacitor alcanza ~63% porque la constante de tiempo se suma al resistir y almacenar en serie.",
+    "error_real": "τ = R·C = 10³·10⁻⁶ = 10⁻³ s = 1 ms, no R+C. Al ~63% en un τ ≈ 1 ms.",
+    "categoria": "circuitos_electricos"
+  },
+  {
+    "id": "H20",
+    "pregunta": "Se lanza una moneda justa hasta obtener cara. ¿Cuál es E[número de lanzamientos]?",
+    "respuesta_incorrecta_plausible": "Con probabilidad 1/2 termina en 1 lanzamiento, 1/4 en 2, etc. La esperanza se obtiene como moda ponderada: el valor más frecuente es 1, y como la distribución es geométrica 'sin memoria' E[X]=1.",
+    "error_real": "Para geométrica con P(éxito)=1/2 (número de ensayos hasta el primer éxito), E[X]=1/p=2, no 1. Confunde moda/mínimo con esperanza.",
+    "categoria": "esperanza_geometrica"
+  }
+]

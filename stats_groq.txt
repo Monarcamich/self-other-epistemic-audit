@@ -1,0 +1,16 @@
+LIVE API RESULTS
+provider=groq model=allam-2-7b
+
+
+N paired items: 20
+Detection Rate SELF:  0.050  (failed-to-flag / FRR=0.950)
+Detection Rate OTHER: 0.050  (failed-to-flag / FRR=0.950)
+Self–Other Gap (Other − Self): +0.000
+
+McNemar contingency:
+  both detect=1, only_other=0, only_self=0, neither=19
+  Edwards χ² ≈ nan
+  Exact binomial McNemar two-sided p = 1
+
+Qualitative blind-spot examples (Other detects, Self misses):
+  (none in this run)

@@ -1,0 +1,22 @@
+{
+  "provider": "ollama",
+  "model": "inkling-2-small",
+  "live": false,
+  "aborted": true,
+  "reachable": true,
+  "base_url": "https://ollama.com/v1",
+  "api_key_source": "OLLAMA_API_KEY",
+  "api_key_redacted": true,
+  "error": "Error code: 402 - Add usage credits or subscribe and save up to 66%: https://ollama.com/plans (ref: 334ff9b6-9e95-4e21-b6f0-34938efd15cf)",
+  "attempted_models": [
+    "inkling-2-small",
+    "minimax-m3.1-flash",
+    "mimo-v2.6-flash",
+    "gpt-oss:20b",
+    "muse-spark-open"
+  ],
+  "n_rows": 0,
+  "prompt_version": "soft_v3",
+  "stimuli_version": "v2_harder",
+  "sprint": "Apart Research AI x Epistemics 13-15 Nov 2026"
+}
